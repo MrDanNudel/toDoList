@@ -25,13 +25,12 @@ h1 {
 
 .input-group {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 20px;
 }
 
 #taskInput {
-  width: calc(100% - 110px);
+  width: 100%;
   padding: 10px;
   border: 1px solid #444;
   border-radius: 5px;
@@ -46,7 +45,7 @@ h1 {
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 10px;
+  margin-top: 10px;
 }
 
 #addTaskBtn:hover {
@@ -85,4 +84,47 @@ li button {
 
 li button:hover {
   background-color: #218838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 320px) {
+  #taskInput {
+    width: calc(100% - 80px);
+  }
+
+  #addTaskBtn {
+    padding: 8px 16px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  #taskInput {
+    width: calc(100% - 90px);
+  }
+
+  #addTaskBtn {
+    padding: 10px 18px;
+  }
+
+  li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 414px) {
+  #taskInput {
+    width: calc(100% - 100px);
+  }
+
+  #addTaskBtn {
+    padding: 12px 20px;
+  }
+
+  li {
+    font-size: 16px;
+  }
 }
